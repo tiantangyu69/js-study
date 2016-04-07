@@ -48,3 +48,23 @@ console.log(bbb);
 var ccc = "bb";
 
 console.log(ccc == bbb);
+
+var point = {x: 1, y: 2};
+console.log("x" in point);
+
+console.log("=========================================这是一道华丽的分割线================");
+var data = [7, 8, 9];
+console.log("0" in data);
+console.log(1 in data);
+console.log(3 in data);
+console.log(7 in data);
+
+console.log("instanceof 运算符");
+var d = new Date();
+console.log(d instanceof Date);
+console.log(d instanceof Object);
+console.log(d instanceof String);
+console.log(Object.prototype);
+
+console.log("eval 表达式");
+console.log(eval(3 * (7 + 5)));

@@ -9,3 +9,6 @@ var f = function () {
 }
 
 console.log(typeof f);
+console.log(typeof null);
+console.log(typeof undefined);
+console.log(typeof true);

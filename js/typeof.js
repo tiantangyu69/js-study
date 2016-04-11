@@ -39,8 +39,8 @@ for (var i in arr) {
     console.log(arr[i]);
 }
 
-var input = prompt("请输入数字：", 0);
-console.log(input);
+//var input = prompt("请输入数字：", 0);
+//console.log(input);
 
 console.log("strict模式=================================+");
 var hasStrictMode = (function () {
@@ -48,4 +48,14 @@ var hasStrictMode = (function () {
     return this == undefined;
 })();
 console.log(hasStrictMode);
+
+var callback = function(obj){
+    obj("this is callback result");
+};
+
+callback(function(result){
+    console.log(result);
+});
+
+
 

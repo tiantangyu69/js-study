@@ -1,7 +1,7 @@
 /**
  * Created by lizhitao on 16-4-20.
  */
-Object.defineProperties(Object.prototype, "extend", {// 定义Object.prototype.extend
+Object.defineProperty(Object.prototype, "extend", {// 定义Object.prototype.extend
     writable: true,
     enumerable: false,// 将其定义为不可枚举的
     configurable: true,
@@ -13,4 +13,9 @@ Object.defineProperties(Object.prototype, "extend", {// 定义Object.prototype.e
             Object.defineProperties(this, names[i], desc);// 用它给this创建一个属性
         }
     }
-})
+});
+
+var p = {x: 1};
+var o = Object.create(p);
+console.log(p.isPrototypeOf(o));
+console.log(Object.prototype.isPrototypeOf(o));

@@ -84,3 +84,56 @@ var isArray = Function.isArray || function (o) {
 
 console.log(isArray([]));
 console.log(isArray({}));
+
+// ECMAScript5 新增方法
+var data = [1, 2, 3, 4, 5];
+var sum = 0;
+data.forEach(function (value) {
+    sum += value;
+});
+console.log("sum:", sum);
+
+data.forEach(function (v, i, a) {
+    console.log(v, i, a);
+});
+
+var a = [1, 2, 3];
+b = a.map(function (x) {
+    return x * x;
+});
+console.log(b);
+
+a = [5, 4, 3, 2, 1];
+smallVlaues = a.filter(function (x) {
+    return x < 3;
+});
+everyOther = a.filter(function (x, i) {
+    return i % 2 == 0;
+});
+console.log("smallValues:", smallVlaues);
+console.log("everyOther:", everyOther);
+
+a = [1, 2, 3, 4, 5];
+flag1 = a.every(function (x) {
+    return x < 10;
+});
+flag2 = a.every(function (x) {
+    return x % 2 === 0;
+});
+console.log(flag1, flag2);
+
+flag3 = a.some(function (x) {
+    return x % 2 === 0;
+});
+console.log(flag3);
+
+
+var a = [1, 2, 3, 4, 5];
+var sum = a.reduce(function (x, y) {
+    return x + y;
+}, 0);
+console.log(sum);
+var product = a.reduce(function (x, y) {
+    return x * y;
+}, 1);
+console.log(product);

@@ -137,3 +137,23 @@ var product = a.reduce(function (x, y) {
     return x * y;
 }, 1);
 console.log(product);
+var max = a.reduce(function (x, y) {
+    return x > y ? x : y;
+});
+console.log(max);
+
+// indexOf() lastIndexOf()
+
+/**
+ * 判断o是否为一个类数组对象
+ * 字符串和函数有length属性，但是可以用typeof检测将其排除，
+ * 在客户端javascript中，DOM文本节点也有length属性，需要用额外判断o.nodeType != 3 将其排除
+ * @param o
+ * @returns {boolean}
+ */
+function isArrayLike(o) {
+    if (o && typeof o === "object" && isFinite(o.length) && o.length >= 0 && o.length === Math.floor(o.length) && o.length < 4294967296)
+        return true;
+    else
+        return false;
+}

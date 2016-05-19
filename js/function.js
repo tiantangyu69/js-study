@@ -7,3 +7,9 @@ var aa = (function (x) {
 }(10));
 console.log(aa);
 
+bbb();
+
+function bbb() {
+    console.log("bbb");
+}
+

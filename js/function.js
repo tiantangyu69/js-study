@@ -13,3 +13,8 @@ function bbb() {
     console.log("bbb");
 }
 
+var strict = function () {
+    return !this;
+};
+console.log(strict());
+
